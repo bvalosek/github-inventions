@@ -1,6 +1,6 @@
 {
   "name": "github-inventions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Basic website to display previous inventions via github e.g. for an employer",
   "main": "index.js",
   "scripts": {
