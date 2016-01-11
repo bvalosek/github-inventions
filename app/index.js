@@ -45,7 +45,8 @@ app.get(process.env.ROOT, (req, res) => {
       user: process.env.USER,
       root: process.env.ROOT,
       name: process.env.NAME,
-      employer: process.env.EMPLOYER
+      employer: process.env.EMPLOYER,
+      version: require('../package.json').version
     });
 
   });
