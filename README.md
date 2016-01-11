@@ -4,7 +4,7 @@ Basic website to display previous inventions via github e.g. for an employer
 
 ## Usage
 
-Provide the following environment variables:
+Provide the following environment variables (e.g. in a `.env` file):
 
 ```
 TOKEN=123-yourgithubtoken-123
@@ -15,10 +15,10 @@ USER=bvalosek
 WEBSITE=https://bvalosek.com
 ```
 
-Build and run this docker image (with the above environment variables set)
+And run the server:
 
 ```
-$ docker build -t bvalosek/github-inventions .
+$ npm start
 ```
 
 ## License
