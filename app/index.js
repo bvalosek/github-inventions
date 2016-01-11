@@ -52,6 +52,8 @@ app.get(process.env.ROOT, (req, res) => {
   });
 });
 
+app.get('/', (req, res) => res.redirect(process.env.ROOT));
+
 // boot
 const port = process.env.PORT || 8000;
 app.listen(port, err => {
