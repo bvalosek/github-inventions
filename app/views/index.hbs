@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ name }} - Prior Inventions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prior invention disclosure for {{ name }}">
+    <meta name="author" content="{{ name }}"/>
+    <meta name="copyright" content="&copy; Copyright {{ year }}"/>
+  </head>
+  <body>
+    <h1>Exhibit A: Prior Inventions</h1>
+    <p>
+      {{ date }}
+    </p>
+    <p>
+      The purpose of this document is to disclose:
+
+      <ul>
+        <li>
+          a) All prior inventions of mine ({{ name }}) prior to my employment
+            at {{ employer }}.
+        </li>
+        <li>
+          b) All inventions occurring or updated after employment at {{
+            employer }} that do not relate to the {{ employer }}'s business,
+            research, or development.
+        </li>
+        <li>
+          c) That all inventions listed here retain the rights as detailed in
+          their individual licenses as described in the project source code.
+        </li>
+        <li>
+          d) That any inventions listed here may be integrated into products at
+          {{ employer }} so long as the license agreements of that invention
+          are respected.
+        </li>
+      </ul>
+
+    </p>
+    <p>
+      This document is available online and up-to-date at
+      <a href="{{ website }}{{ root }}">{{ website }}{{ root}}</a> and is sourced from
+      <a href="https://github.com/{{ user }}">https://github.com/{{ user }}</a>.
+    </p>
+    <p>
+      The source code that generated this document is available at
+      <a href="https://github.com/bvalosek/github-inventions">https://github.com/bvalosek/github-inventions</a>.
+    </p>
+
+    <h2>Inventions</h2>
+    {{#each repos}}
+      <hr>
+      <h3>{{full_name}}</h3>
+      {{#if fork}}
+      <p>(this project is a fork)</p>
+      {{/if}}
+      {{#if lastTag}}<p>latest version: {{lastTag}}</p>{{/if}}
+      <p>created: {{created_at}}</p>
+      <p>modified: {{updated_at}}</p>
+      <p><a href="{{html_url}}">{{html_url}}</a></p>
+      <p>{{description}}</p>
+    {{/each}}
+  </body>
+</html>
