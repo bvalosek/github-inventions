@@ -1,0 +1,18 @@
+web:
+  image: bvalosek/github-inventions:latest
+  restart: on-failure
+  environment:
+    KONTENA_LB_VIRTUAL_HOSTS: inventions.bvalosek.com
+    KONTENA_LB_INTERNAL_PORT: 8000
+    PORT: 8000
+    EMPLOYER: Exigo, Inc
+    NAME: Brandon Valosek
+    ROOT: /exigo
+    USER: bvalosek
+    WEBSITE: https://inventions.bvalosek.com
+  secrets:
+    - secret: GITHUB_TOKEN
+      name: TOKEN
+      type: env
+  external_links:
+    - lb
